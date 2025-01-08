@@ -33,6 +33,7 @@ public class GenericResponse<T> implements Serializable{/**
 	}
 
 
+	public GenericResponse() {
 
-
+	}
 }
