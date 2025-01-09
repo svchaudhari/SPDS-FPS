@@ -9,6 +9,11 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 
+/**
+ * @author muhammad talib
+ * This class was creaded on 08-Jan-2025.
+ */
+
 @Data
 @Entity
 @Table(schema = "fps", name = "fps_document")  // database name
@@ -25,7 +30,7 @@ public class FpsDocument extends Auditable implements Serializable {
     private Long id;
 
     @Column(name = "shop_no")
-    private String shopNo;
+    private Long shopNo;
 
     @Column(name = "d_authorization_certificate")
     private Long dAuthorizationCertificate;

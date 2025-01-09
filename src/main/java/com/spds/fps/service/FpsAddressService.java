@@ -5,6 +5,12 @@ import com.spds.fps.entity.FpsAddress;
 
 import java.util.List;
 
+
+/**
+ * @author muhammad talib
+ * This class was creaded on 08-Jan-2025.
+ */
+
 public interface FpsAddressService {
 
     FpsAddress saveAndUpdateFpsAddress(FpsAddress fpsAddress);

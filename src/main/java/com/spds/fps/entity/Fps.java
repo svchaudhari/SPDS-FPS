@@ -73,7 +73,7 @@ public class Fps extends Auditable implements Serializable {
     private String shopType;
 
     @Column(name = "shop_no")
-    private String shopNo;
+    private Long shopNo;
 
     @Column(name = "remarks")
     private String remarks;

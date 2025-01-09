@@ -1,13 +1,17 @@
 package com.spds.fps.entity;
 
 
-import com.spds.fps.util.GeneralUtil;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
+
+/**
+ * @author muhammad talib
+ * This class was creaded on 08-Jan-2025.
+ */
 
 @Data
 @Entity
@@ -24,7 +28,7 @@ public class FpsDealerDetails extends Auditable implements Serializable {
     private Long id;
 
     @Column(name = "shop_no")
-    private String shopNo = GeneralUtil.generateRandomString(); //  autogenerate sequence
+    private Long shopNo;
 
     @Column(name = "del_uid")
     private String delUid;
@@ -91,15 +95,16 @@ public class FpsDealerDetails extends Auditable implements Serializable {
 
     @Column(name = "fps_id")
     private Long fpsId;
-/*
-    @Column(name = "dealer_mapping_id")
-    private Long dealerMappingId;
 
-    @Column(name = "nominee_1_mapping_id")
-    private Long nominee1MappingId;
+    /*
+        @Column(name = "dealer_mapping_id")
+        private Long dealerMappingId;
 
-    @Column(name = "nominee_2_mapping_id")
-    private Long nominee2MappingId;
+        @Column(name = "nominee_1_mapping_id")
+        private Long nominee1MappingId;
 
- */
+        @Column(name = "nominee_2_mapping_id")
+        private Long nominee2MappingId;
+
+     */
 }
