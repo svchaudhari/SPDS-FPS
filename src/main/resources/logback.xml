@@ -12,11 +12,11 @@
 	<!-- File appender for INFO level /opt/logs -->
 	<appender name="INFO_FILE"
 		class="ch.qos.logback.core.FileAppender">
-		<file>/opt/logs/spds_rcms_info.log</file>
+		<file>/opt/logs/spds_fps_info.log</file>
 		<!-- Size-based rolling policy with zip compression for archived files -->
 		<rollingPolicy
 			class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-			<fileNamePattern>/opt/logs/spds_rcms_info-%d{yyyy-MM-dd-HH}.%i.zip
+			<fileNamePattern>/opt/logs/spds_fps_info-%d{yyyy-MM-dd-HH}.%i.zip
 			</fileNamePattern>
 			<maxFileSize>10MB</maxFileSize> <!-- Max size before rollover -->
 			<maxHistory>30</maxHistory> <!-- Keep 30 days of history -->
@@ -37,11 +37,11 @@
 	<!-- File appender for DEBUG level /opt/logs -->
 	<appender name="DEBUG_FILE"
 		class="ch.qos.logback.core.FileAppender">
-		<file>/opt/logs/spds_rcms_debug.log</file>
+		<file>/opt/logs/spds_fps_debug.log</file>
 		<!-- Size-based rolling policy with zip compression for archived files -->
 		<rollingPolicy
 			class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-			<fileNamePattern>/opt/logs/spds_rcms_debug-%d{yyyy-MM-dd-HH}.%i.zip
+			<fileNamePattern>/opt/logs/spds_fps_debug-%d{yyyy-MM-dd-HH}.%i.zip
 			</fileNamePattern>
 			<maxFileSize>10MB</maxFileSize> <!-- Max size before rollover -->
 			<maxHistory>30</maxHistory> <!-- Keep 30 days of history -->
@@ -65,7 +65,7 @@
 		<!-- Size-based rolling policy with zip compression for archived files -->
 		<rollingPolicy
 			class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-			<fileNamePattern>/opt/logs/spds_rcms_error-%d{yyyy-MM-dd-HH}.%i.zip
+			<fileNamePattern>/opt/logs/spds_fps_error-%d{yyyy-MM-dd-HH}.%i.zip
 			</fileNamePattern>
 			<maxFileSize>10MB</maxFileSize> <!-- Max size before rollover -->
 			<maxHistory>30</maxHistory> <!-- Keep 30 days of history -->

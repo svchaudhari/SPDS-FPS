@@ -1,10 +1,10 @@
-package com.spds.wfm;
+package com.spds.fps;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpdsWorkflowApplicationTests {
+class SpdsFpsApplicationTests {
 
 	@Test
 	void contextLoads() {
