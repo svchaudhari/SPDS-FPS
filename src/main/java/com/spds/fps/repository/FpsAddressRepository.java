@@ -18,5 +18,9 @@ public interface FpsAddressRepository extends JpaRepository<FpsAddress, Long> {
 
     List<FpsAddress> findByFpsIdAndActiveTrueAndDeletedFalse(Long fpsId);
 
+    List<FpsAddress> findAllByActiveTrueAndDeletedFalse();
+
+    List<FpsAddress> findAllByDeletedFalse();
+
     Optional<FpsAddress> findByIdAndActiveTrueAndDeletedFalse(Long id);
 }

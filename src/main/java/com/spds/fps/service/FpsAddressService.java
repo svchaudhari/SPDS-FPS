@@ -17,7 +17,7 @@ public interface FpsAddressService {
 
     FpsAddress getFpsAddressById(Long id);
 
-    List<FpsAddress> getAllFpsAddress();
+    List<FpsAddress> getAllFpsAddress(Boolean isActive);
 
     GenericResponse deleteFpsAddressById(Long id);
 

@@ -15,9 +15,9 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(schema = "fps", name = "fps")
+@Table(schema = "fps", name = "fps_master")
 @NoArgsConstructor
-public class Fps extends Auditable implements Serializable {
+public class FpsMaster extends Auditable implements Serializable {
 
     private static final long serialVersionUID = 1626227746755001727L;
 

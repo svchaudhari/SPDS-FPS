@@ -18,7 +18,7 @@ public interface FpsDealerDetailsService {
 
     FpsDealerDetails getFpsDealerDetailsById(Long id);
 
-    List<FpsDealerDetails> getAllFpsDealerDetails();
+    List<FpsDealerDetails> getAllFpsDealerDetails(Boolean isActive);
 
     GenericResponse deleteFpsDealerDetailsById(Long id);
 

@@ -43,8 +43,12 @@ public class FpsDealerDetailsServiceImpl implements FpsDealerDetailsService {
     }
 
     @Override
-    public List<FpsDealerDetails> getAllFpsDealerDetails() {
-        return fpsDealerDetailsRepository.findAll();
+    public List<FpsDealerDetails> getAllFpsDealerDetails(Boolean isActive) {
+        if (isActive == null || isActive == true) {
+            return fpsDealerDetailsRepository.findAllByActiveTrueAndDeletedFalse();
+        } else {
+            return fpsDealerDetailsRepository.findAllByDeletedFalse();
+        }
     }
 
     @Override

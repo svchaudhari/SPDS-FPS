@@ -1,7 +1,7 @@
 package com.spds.fps.service;
 
 import com.spds.fps.dto.GenericResponse;
-import com.spds.fps.entity.Fps;
+import com.spds.fps.entity.FpsMaster;
 
 import java.util.List;
 
@@ -13,11 +13,11 @@ import java.util.List;
 
 public interface FpsService {
 
-    Fps saveAndUpdateFps(Fps fps);
+    FpsMaster saveAndUpdateFps(FpsMaster fps);
 
-    Fps getFpsById(Long id);
+    FpsMaster getFpsById(Long id);
 
-    List<Fps> getAllFps();
+    List<FpsMaster> getAllFps(Boolean isActive);
 
     GenericResponse deleteFpsById(Long id);
 }

@@ -4,6 +4,7 @@ import com.spds.fps.entity.FpsDocument;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 /***
@@ -20,5 +21,9 @@ public interface FpsDocumentRepository extends JpaRepository<FpsDocument, Long> 
     Optional<FpsDocument> findByFpsDealerDetailsIdAndActiveTrueAndDeletedFalse(Long fpsDealerDetailsId);
 
     Optional<FpsDocument> findByIdAndActiveTrueAndDeletedFalse(Long id);
+
+    List<FpsDocument> findAllByActiveTrueAndDeletedFalse();
+
+    List<FpsDocument> findAllByDeletedFalse();
 
 }

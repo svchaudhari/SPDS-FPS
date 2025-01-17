@@ -34,8 +34,12 @@ public class FpsDocumentsServiceImpl implements FpsDocumentService {
     }
 
     @Override
-    public List<FpsDocument> getAllFpsDocument() {
-        return fpsDocumentRepository.findAll();
+    public List<FpsDocument> getAllFpsDocument(Boolean isActive) {
+        if ( isActive == null  || isActive == true) {
+            return fpsDocumentRepository.findAllByActiveTrueAndDeletedFalse();
+        } else {
+           return fpsDocumentRepository.findAllByDeletedFalse();
+        }
     }
 
     @Override

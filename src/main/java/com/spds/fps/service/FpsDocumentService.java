@@ -18,7 +18,7 @@ public interface FpsDocumentService {
 
     FpsDocument getFpsDocumentById(Long id);
 
-    List<FpsDocument> getAllFpsDocument();
+    List<FpsDocument> getAllFpsDocument(Boolean isActive);
 
     GenericResponse deleteFpsDocumentById(Long id);
 

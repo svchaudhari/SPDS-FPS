@@ -34,8 +34,12 @@ public class FpsAddressServiceImpl implements FpsAddressService {
     }
 
     @Override
-    public List<FpsAddress> getAllFpsAddress() {
-        return fpsAddressRepository.findAll();
+    public List<FpsAddress> getAllFpsAddress(Boolean isActive) {
+        if (isActive == null || isActive == true) {
+            return fpsAddressRepository.findAllByActiveTrueAndDeletedFalse();
+        } else {
+            return fpsAddressRepository.findAllByDeletedFalse();
+        }
     }
 
     @Override
